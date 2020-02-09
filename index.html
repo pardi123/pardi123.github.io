@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profil pardi</title>
+	<link rel="stylesheet" type="text/css" href="aset/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="layout1">
+		<div class="kepala">
+			<h1 class="pardi2">Muhammad supardi</h1>
+			<h4 class="welcome">Welcome to my website</h4>
+			<div class="nav">
+				<a href="javascript:void(0)" class="id">Profil</a>
+				<a href="javascript:void(0)" class="baruu">About</a>
+				<a href="">Skill</a>
+			</div>
+		</div>
+
+	</div>
+		<div id="img" class="img">
+			<img class="img2" src="pardi2.JPG">
+			
+		</div>
+	
+		<div class="layout3">
+		<div class="baru">
+				<div class="baru-heading">
+						<button class="tutup2">&times;</button>	
+						<center><h1>about</h1></center>
+				</div>
+				<div class="baru-body">
+						<p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	</p>
+				</div>
+		</div>
+			
+		</div>
+	<div class="layout2">
+		<div class="body">
+			<div class="body-heading">
+				<button class="tutup">&times;</button>
+				<h1>Data diri</h1>
+			</div>
+			<div class="body-content">
+				<center>
+					<img class="none" src="pardi3.JPG">	
+				</center>
+				<div class="data-diri">
+					<h4>Nama Lengkap : </h4>
+					<h5>Muhammad supardi</h5>
+					<h4>Tempat tanggal lahir : </h4>
+					<h5>Jambi-27-Mei-2000</h5>
+					<h4>Alamat : </h4>
+					<h5>Jl.Dr.Siwabessy RT:07 Buluran Kenali Kecamatan Telanaipura NO:36</h5>
+					<h4>Status : </h4>
+					<h5>Hubungan Tanpa Status</h5>
+
+				</div>
+			</div>
+		</div>
+	</div>
+		<script>
+			$(document).ready(function(){
+				$(".id").click(function(){
+					$(".layout2").fadeIn(1000);
+					$(".body").css("display","initial");
+					$(".body").css("animation","tampil ease-in-out 2s");
+				});
+				$(".tutup").click(function(){
+					$(".body").css("animation","tutup ease-in-out 2s");
+					
+					var time = 2;
+					var interval = setInterval(function(){
+						time--;
+						if(time == 0)
+						{
+							$(".layout2").fadeOut(1000);
+							$(".body").css("display","none");
+							clearInterval(interval);
+						}
+						
+					},1000);
+				});
+			});
+			$(document).ready(function(){
+				$(".baruu").click(function(){
+					$(".layout3").fadeIn(1000);
+					$(".baru").css("display","initial");
+					$(".baru").css("animation","tampil ease-in-out 2s");
+				});
+				$(".tutup2").click(function(){
+					$(".baru").css("animation","tutup ease-in-out 2s")
+					var time = 2;
+					var interval = setInterval(function(){
+							time--;
+							if (time == 0) {
+							$(".layout3").fadeOut(1000);
+							$(".baru").css("display","none");
+							clearInterval(interval);
+						}
+					},1000);
+				});
+
+				
+			});			
+
+
+		</script>
+</body>
+</html>
